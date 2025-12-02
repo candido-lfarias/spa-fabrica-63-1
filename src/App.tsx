@@ -1,17 +1,12 @@
-// src/App.tsx
-import "./App.css";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import Purchases from "./pages/Purchases";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Clients from "./pages/Clients";
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/purchases" element={<Purchases />} />
-        <Route path="*" element={<Navigate to="/purchases" replace />} />
+        <Route path="/clientes" element={<Clients />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
-
-export default App;
